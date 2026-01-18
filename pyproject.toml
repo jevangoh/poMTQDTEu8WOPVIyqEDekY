@@ -1,13 +1,20 @@
 [project]
 authors = [{name = "Jevan Goh", email = "javerngoh@gmail.com"}]
 dependencies = []
-name = "poMTQDTEu8WOPVIyqEDekY"
+name = "poMTQDTEu8WOPVIyqEDekY" #please change this
 requires-python = ">= 3.11"
 version = "0.0.0"
 
 [build-system]
 build-backend = "hatchling.build"
 requires = ["hatchling"]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.5.1,<5",
+    "ruff>=0.14.10,<0.15"
+]
+
 
 [tool.pixi.workspace]
 channels = ["conda-forge"]
@@ -17,3 +24,15 @@ platforms = ["win-64"]
 pomtqdteu8wopviyqedeky = { path = ".", editable = true }
 
 [tool.pixi.tasks]
+
+
+[tool.pixi.feature.dev.tasks]
+setup = "pre-commit install --install-hooks && pre-commit autoupdate"
+
+[tool.pixi.feature.dev.dependencies]
+gh = ">=2.83.2,<3"
+ty = ">=0.0.8,<0.0.9"
+
+[tool.pixi.environments.dev]
+features = ["dev"]
+solve-group = "default"
