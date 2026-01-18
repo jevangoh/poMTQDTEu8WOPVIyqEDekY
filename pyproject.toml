@@ -27,7 +27,23 @@ pomtqdteu8wopviyqedeky = { path = ".", editable = true }
 
 
 [tool.pixi.feature.dev.tasks]
-setup = "pre-commit install --install-hooks && pre-commit autoupdate"
+setup = """
+    gh label delete "bug" --yes || true;
+    gh label delete "documentation" --yes || true;
+    gh label delete "duplicate" --yes || true;
+    gh label delete "enhancement" --yes || true;
+    gh label delete "good first issue" --yes || true;
+    gh label delete "help wanted" --yes || true;
+    gh label delete "invalid" --yes || true;
+    gh label delete "question" --yes || true;
+    gh label delete "wontfix" --yes || true;
+    gh label create "type: bug" --color "d73a4a" --description "Unexpected outcome." --force &&
+    gh label create "type: suggestion" --color "ffa5a5" --description "Propose improvements or new ideas." --force &&
+    gh label create "scope: content" --color "0075ca" --description "The actual source code." --force &&
+    gh label create "scope: docs" --color "a2eeef" --description "Documentation(README, contributing, license)." --force &&
+    gh label create "scope: workflow" --color "5319e7" --description "Continuous Integration (CI) related."
+"""
+init = "pre-commit install --install-hooks && pre-commit autoupdate"
 
 [tool.pixi.feature.dev.dependencies]
 gh = ">=2.83.2,<3"
