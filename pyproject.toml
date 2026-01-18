@@ -27,7 +27,7 @@ pomtqdteu8wopviyqedeky = { path = ".", editable = true }
 
 
 [tool.pixi.feature.dev.tasks]
-setup = """
+init = """
     gh label delete "bug" --yes || true;
     gh label delete "documentation" --yes || true;
     gh label delete "duplicate" --yes || true;
@@ -43,7 +43,7 @@ setup = """
     gh label create "scope: docs" --color "a2eeef" --description "Documentation(README, contributing, license)." --force &&
     gh label create "scope: workflow" --color "5319e7" --description "Continuous Integration (CI) related."
 """
-init = "pre-commit install --install-hooks && pre-commit autoupdate"
+setup = "pre-commit install --install-hooks && pre-commit autoupdate"
 
 [tool.pixi.feature.dev.dependencies]
 gh = ">=2.83.2,<3"
