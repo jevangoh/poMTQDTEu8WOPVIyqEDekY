@@ -1,7 +1,7 @@
 [project]
 authors = [{name = "Jevan Goh", email = "javerngoh@gmail.com"}]
 dependencies = []
-name = "poMTQDTEu8WOPVIyqEDekY" #please change this
+name = "poMTQDTEu8WOPVIyqEDekY" #please change this to the name of the actual package
 requires-python = ">= 3.11"
 version = "0.0.0"
 
@@ -10,11 +10,6 @@ build-backend = "hatchling.build"
 requires = ["hatchling"]
 
 [dependency-groups]
-dev = [
-    "pre-commit>=4.5.1,<5",
-    "ruff>=0.14.10,<0.15"
-]
-
 
 [tool.pixi.workspace]
 channels = ["conda-forge"]
@@ -43,11 +38,13 @@ init = """
     gh label create "scope: docs" --color "a2eeef" --description "Documentation(README, contributing, license)." --force &&
     gh label create "scope: workflow" --color "5319e7" --description "Continuous Integration (CI) related."
 """
-setup = "pre-commit install --install-hooks && pre-commit autoupdate"
+setup = "prek install"
 
 [tool.pixi.feature.dev.dependencies]
 gh = ">=2.83.2,<3"
 ty = ">=0.0.8,<0.0.9"
+ruff = ">=0.14.13,<0.15"
+prek = ">=0.2.30,<0.3"
 
 [tool.pixi.environments.dev]
 features = ["dev"]
