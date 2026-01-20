@@ -1,0 +1,8 @@
+site_name: pomtqdteu8wopviyqedeky # please change accordingly
+theme:
+  name: material
+
+docs_dir: .
+
+# nav:
+#   - Home: README.md
