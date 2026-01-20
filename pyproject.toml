@@ -49,3 +49,15 @@ prek = ">=0.2.30,<0.3"
 [tool.pixi.environments.dev]
 features = ["dev"]
 solve-group = "default"
+
+
+[tool.ruff]
+exclude = ["node_modules", "venv", ".git", ".pixi"]
+line-length = 100
+indent-width = 4
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+docstring-code-format = true
