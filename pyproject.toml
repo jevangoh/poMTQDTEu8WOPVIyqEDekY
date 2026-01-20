@@ -40,6 +40,7 @@ init = """
     gh label create "scope: workflow" --color "5319e7" --description "Continuous Integration (CI) related."
 """
 setup = "prek install"
+build_docs = "mkdocs build --config-file mkdocs.yaml"
 
 [tool.pixi.feature.dev.dependencies]
 gh = ">=2.83.2,<3"
@@ -47,8 +48,12 @@ ty = ">=0.0.8,<0.0.9"
 ruff = ">=0.14.13,<0.15"
 prek = ">=0.2.30,<0.3"
 
+[tool.pixi.feature.docs.dependencies]
+mkdocs = "*"
+mkdocs-material = "*"
+
 [tool.pixi.environments.dev]
-features = ["dev"]
+features = ["dev", "docs"]
 solve-group = "default"
 
 ##=========================== ruff ===========================
