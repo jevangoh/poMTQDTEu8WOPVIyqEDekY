@@ -65,5 +65,5 @@ skip-magic-trailing-comma = false
 docstring-code-format = true
 
 #=========================== ty ===========================
-[tool.ty]
+[tool.ty.environment]
 root = ["."]
