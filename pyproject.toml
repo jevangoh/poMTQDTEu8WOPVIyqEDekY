@@ -11,6 +11,7 @@ requires = ["hatchling"]
 
 [dependency-groups]
 
+#=========================== pixi ==================================
 [tool.pixi.workspace]
 channels = ["conda-forge"]
 platforms = ["win-64"]
@@ -50,8 +51,9 @@ prek = ">=0.2.30,<0.3"
 features = ["dev"]
 solve-group = "default"
 
-
+##=========================== ruff ===========================
 [tool.ruff]
+src = ["."]
 exclude = ["node_modules", "venv", ".git", ".pixi"]
 line-length = 100
 indent-width = 4
@@ -61,3 +63,7 @@ quote-style = "double"
 indent-style = "space"
 skip-magic-trailing-comma = false
 docstring-code-format = true
+
+#=========================== ty ===========================
+[tool.ty]
+root = ["."]
