@@ -25,5 +25,8 @@ jobs:
       - name: Run Ruff Format Check
         run: pixi run -e dev ruff format --check .
 
+      - name: Generate Stubs
+        run: pixi run -e dev generate_stubs        
+
       - name: Run ty Type Checker
         run: pixi run -e dev ty check
