@@ -42,7 +42,6 @@ init = """
 setup = "prek install"
 clean_stubs = "python -c \"import pathlib; [f.unlink() for f in pathlib.Path('$PIXI_PROJECT_NAME').rglob('*.pyi')]\""
 generate_stubs = {cmd = "stubgen $PIXI_PROJECT_NAME -o . --include-docstrings", depends-on = ["clean_stubs"]}
-generate_and_stage_stubs = {cmd = "git add **/*.pyi", depends-on = ["generate_stubs"]}
 build_docs = "mkdocs build --config-file mkdocs.yaml"
 
 [tool.pixi.feature.dev.dependencies]

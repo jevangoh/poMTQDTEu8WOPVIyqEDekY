@@ -6,8 +6,20 @@ repos:
 
   - repo: local
     hooks:
+      - id: pixi-install
+        name: pixi-install
+        entry: pixi install
+        language: system
+        pass_filenames: false    
+
       - id: generate-stubs
         name: regenerate-stubs
-        entry: bash -c "pixi run -e dev generate_and_stage_stubs"
+        entry: bash -c "pixi run -e dev generate_stubs"
         language: system
-        pass_filenames: false      
+        pass_filenames: false
+
+      - id: check-for-drift
+        name: check-for-drift
+        entry: git diff --exit-code
+        language: system
+        pass_filenames: false        
