@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [main, master] # Triggers when code is merged into these branches
+    branches: [main, master]
   pull_request:
-    branches: [main, master] # Also run on PRs to catch errors BEFORE merge
+    branches: [main, master]
 
 jobs:
   lint-and-typecheck:
