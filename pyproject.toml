@@ -51,6 +51,7 @@ prek = ">=0.2.30,<0.3"
 [tool.pixi.feature.docs.dependencies]
 mkdocs = "*"
 mkdocs-material = "*"
+pymdown-extensions = ">=10.20,<11"
 
 [tool.pixi.environments.dev]
 features = ["dev", "docs"]
