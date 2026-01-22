@@ -1,4 +1,4 @@
-# [poMTQDTEu8WOPVIyqEDekY](https://github.com/jevangoh/poMTQDTEu8WOPVIyqEDekY) <!-- change accordingly (package name i.e. uuid)[link to github repository] -->
+# poMTQDTEu8WOPVIyqEDekY
 
 <!-- please update the respective links -->
 [[github]](https://github.com/jevangoh/poMTQDTEu8WOPVIyqEDekY) [[readthedocs]](https://pomtqdteu8wopviyqedeky.readthedocs.io/en/latest/)
