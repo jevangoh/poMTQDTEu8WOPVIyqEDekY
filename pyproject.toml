@@ -17,7 +17,7 @@ channels = ["conda-forge"]
 platforms = ["win-64", "linux-64"]
 
 [tool.pixi.pypi-dependencies]
-pomtqdteu8wopviyqedeky = { path = ".", editable = true }
+poMTQDTEu8WOPVIyqEDekY = { path = ".", editable = true }
 
 [tool.pixi.tasks]
 

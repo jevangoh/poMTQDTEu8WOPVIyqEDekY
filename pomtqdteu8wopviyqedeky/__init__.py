@@ -1,1 +1,1 @@
-from .pomtqdteu8wopviyqedeky import pomtqdteu8wopviyqedeky as pomtqdteu8wopviyqedeky
+from .poMTQDTEu8WOPVIyqEDekY import poMTQDTEu8WOPVIyqEDekY as poMTQDTEu8WOPVIyqEDekY

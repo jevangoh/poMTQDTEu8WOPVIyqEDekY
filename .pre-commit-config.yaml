@@ -15,7 +15,7 @@ repos:
 
       - id: ruff-format
         name: ruff-format
-        entry: pixi run ruff format
+        entry: pixi run -e dev ruff format
         language: system
         types_or: [python, pyi]
         pass_filenames: false
