@@ -1,1 +1,1 @@
-pomtqdteu8wopviyqedeky: bool  # example
+pomtqdteu8wopviyqedeky: bool = True  # example
