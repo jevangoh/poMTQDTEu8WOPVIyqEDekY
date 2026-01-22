@@ -1,9 +1,4 @@
 repos:
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.13
-    hooks:
-      - id: ruff-format
-
   - repo: local
     hooks:
       - id: pixi-install
@@ -17,6 +12,12 @@ repos:
         entry: bash -c "pixi run -e dev generate_stubs"
         language: system
         pass_filenames: false
+
+      - id: ruff-format
+        name: ruff-format
+        entry: pixi run ruff format
+        language: system
+        types_or: [python, pyi]        
 
       - id: check-for-drift
         name: check-for-drift
