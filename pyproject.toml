@@ -21,7 +21,6 @@ poMTQDTEu8WOPVIyqEDekY = { path = ".", editable = true }
 
 [tool.pixi.tasks]
 
-
 [tool.pixi.feature.dev.tasks]
 init = """
     gh label delete "bug" --yes || true;
@@ -40,9 +39,12 @@ init = """
     gh label create "scope: workflow" --color "5319e7" --description "Continuous Integration (CI) related."
 """
 setup = "prek install"
+sync_pixi_venv = "pixi install"
 clean_stubs = "python -c \"import pathlib; [f.unlink() for f in pathlib.Path('$PIXI_PROJECT_NAME').rglob('*.pyi')]\""
 generate_stubs = {cmd = "stubgen -p $PIXI_PROJECT_NAME -o . --include-docstrings", depends-on = ["clean_stubs"]}
 build_docs = "mkdocs build --config-file mkdocs.yaml"
+lint_markdown = "markdownlint-cli2 '**/*.md' '#node_modules'"
+pre_commit = {depends-on = ["sync_pixi_venv", "generate_stubs"]}
 
 [tool.pixi.feature.dev.dependencies]
 gh = ">=2.83.2,<3"
@@ -50,6 +52,8 @@ ty = ">=0.0.8,<0.0.9"
 ruff = ">=0.14.13,<0.15"
 prek = ">=0.2.30,<0.3"
 mypy = ">=1.19.1,<2"
+nodejs = ">=25.2.1,<25.3"
+markdownlint-cli2 = ">=0.20.0,<0.21"
 
 [tool.pixi.feature.docs.dependencies]
 mkdocs = "*"
