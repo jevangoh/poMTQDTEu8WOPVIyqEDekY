@@ -18,7 +18,7 @@ repos:
         entry: pixi run -e dev ruff format
         language: system
         types_or: [python, pyi]
-        pass_filenames: false
+        pass_filenames: true
 
       - id: check-for-drift
         name: check-for-drift
