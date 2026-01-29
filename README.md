@@ -6,7 +6,8 @@
 [INSERT DESCRIPTION]
 
 <!-- do not remove or edit this section -->
-## Getting Started 
+## Getting Started
+
 This repository is generated from [q6taaj04do99vgf9cog0gurq6](https://github.com/jevangoh/q6taaj04do99vgf9cog0gurq6) template.  
 
 **PLEASE VISIT [am93nYOWl400BMxhyHyWhM](https://github.com/jevangoh/am93nYOWl400BMxhyHyWhM.git) FIRST.** It contains the documentation for repositories following the [q6taaj04do99vgf9cog0gurq6](https://github.com/jevangoh/q6taaj04do99vgf9cog0gurq6) template.

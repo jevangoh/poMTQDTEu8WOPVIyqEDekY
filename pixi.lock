@@ -1456,7 +1456,7 @@ packages:
 - pypi: ./
   name: q6taaj04do99vgf9cog0gurq6
   version: 0.0.0
-  sha256: b0e106c6c48c3159010acda6aa88c4e17c8309087829af8d05ab35a105ddd713
+  sha256: 63c56ff3ae29d33654fe3c33f3fd112daf626d295946fe7fddb26cbab5cc26df
   requires_python: '>=3.11'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/readline-8.3-h853b02a_0.conda
   sha256: 12ffde5a6f958e285aa22c191ca01bbd3d6e710aa852e00618fa6ddc59149002

@@ -28,7 +28,8 @@ sync_pixi_venv = "pixi install"
 clean_stubs = "python -c \"import pathlib; [f.unlink() for f in pathlib.Path('$PIXI_PROJECT_NAME').rglob('*.pyi')]\""
 generate_stubs = {cmd = "stubgen -p $PIXI_PROJECT_NAME -o . --include-docstrings", depends-on = ["clean_stubs"]}
 build_docs = "mkdocs build --config-file mkdocs.yaml"
-lint_markdown = "markdownlint-cli2 '**/*.md' '#node_modules'"
+lint_markdown = "npx --yes markdownlint-cli2 '**/*.md'"
+format_markdown = "npx --yes markdownlint-cli2 --fix '**/*.md'"
 
 [tool.pixi.feature.dev.dependencies]
 gh = ">=2.83.2,<3"
