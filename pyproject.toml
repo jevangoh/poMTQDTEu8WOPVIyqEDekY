@@ -22,22 +22,7 @@ q6taaj04do99vgf9cog0gurq6 = { path = ".", editable = true } #change to the name 
 [tool.pixi.tasks]
 
 [tool.pixi.feature.dev.tasks]
-init = """
-    gh label delete "bug" --yes || true;
-    gh label delete "documentation" --yes || true;
-    gh label delete "duplicate" --yes || true;
-    gh label delete "enhancement" --yes || true;
-    gh label delete "good first issue" --yes || true;
-    gh label delete "help wanted" --yes || true;
-    gh label delete "invalid" --yes || true;
-    gh label delete "question" --yes || true;
-    gh label delete "wontfix" --yes || true;
-    gh label create "type: bug" --color "d73a4a" --description "Unexpected outcome." --force &&
-    gh label create "type: suggestion" --color "ffa5a5" --description "Propose improvements or new ideas." --force &&
-    gh label create "scope: content" --color "0075ca" --description "The actual source code." --force &&
-    gh label create "scope: docs" --color "a2eeef" --description "Documentation(README, contributing, license)." --force &&
-    gh label create "scope: workflow" --color "5319e7" --description "Continuous Integration (CI) related."
-"""
+init = "gh label clone jevangoh/q6taaj04do99vgf9cog0gurq6"
 setup = "prek install"
 sync_pixi_venv = "pixi install"
 clean_stubs = "python -c \"import pathlib; [f.unlink() for f in pathlib.Path('$PIXI_PROJECT_NAME').rglob('*.pyi')]\""
