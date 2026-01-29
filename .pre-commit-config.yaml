@@ -20,6 +20,13 @@ repos:
         types_or: [python, pyi]
         pass_filenames: true
 
+      - id: lint-markdown
+        name: lint-markdown
+        entry: pixi run -e dev markdownlint-cli2
+        language: system
+        types: [markdown]
+        pass_filenames: true        
+
       - id: check-for-drift
         name: check-for-drift
         entry: git diff --exit-code
